@@ -23,3 +23,5 @@ NASHEDY_PROJECT_CONTEXT.md
 # Rust/Zola
 target/
 **/*.bk
+zola.exe
+zola.zip
