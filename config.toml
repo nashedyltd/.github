@@ -9,8 +9,8 @@ compile_sass = false # We manage SASS separately if needed, or use raw CSS for n
 build_search_index = true
 
 [markdown]
-highlight_code = true
-highlight_theme = "github"
+highlight_code = false
+# highlight_theme = "base16-ocean-dark"
 
 [extra]
 # Enterprise Metadata
