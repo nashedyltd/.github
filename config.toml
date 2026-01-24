@@ -1,7 +1,7 @@
 # Nashedy - Zola Configuration
 # Zero Trust & Enterprise Security Standards
 
-base_url = "http://127.0.0.1:1111"
+base_url = "https://nashedy.netlify.app"
 title = "Nashedy - Building the Future with Technology and Science"
 description = "Nashedy: Sovereign-grade secure systems, hardware, and APIs."
 default_language = "en"

@@ -1,5 +1,5 @@
 [build]
-  command = "zola build"
+  command = "zola build --base-url /"
   publish = "public"
 
 [build.environment]

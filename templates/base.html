@@ -16,9 +16,7 @@
     {% if config.extra.x_content_type_options %}
     <meta http-equiv="X-Content-Type-Options" content="{{ config.extra.x_content_type_options }}">
     {% endif %}
-    {% if config.extra.x_frame_options %}
-    <meta http-equiv="X-Frame-Options" content="{{ config.extra.x_frame_options }}">
-    {% endif %}
+
     {% if config.extra.referrer_policy %}
     <meta name="referrer" content="{{ config.extra.referrer_policy }}">
     {% endif %}
@@ -30,7 +28,7 @@
 
     <meta name="description" content="{{ config.description }}">
     <meta name="author" content="{{ config.extra.author }}">
-    <link rel="icon" href="{{ get_url(path="icon.png") }}" type="image/png">
+    <link rel="icon" href="{{ get_url(path=" icon.png") }}" type="image/png">
 
     {# Google Fonts - Inter #}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +36,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     {# Enterprise Styles #}
-    <link rel="stylesheet" href="{{ get_url(path="css/styles-enterprise.css") }}">
+    <link rel="stylesheet" href="{{ get_url(path=" css/styles-enterprise.css") }}">
 
     {% block head %}{% endblock head %}
 </head>
@@ -60,8 +58,8 @@
     <header class="site-header">
         <nav class="navbar">
             <div class="container">
-                <a href="{{ get_url(path="/") }}" class="navbar-brand">
-                    <img src="{{ get_url(path="icon.png") }}" alt="Nashedy Logo" width="32" height="32">
+                <a href="{{ get_url(path=" /") }}" class="navbar-brand">
+                    <img src="{{ get_url(path=" icon.png") }}" alt="Nashedy Logo" width="32" height="32">
                     <span>Nashedy</span>
                 </a>
                 <div class="navbar-search">
@@ -83,7 +81,8 @@
                     <li><a href="{{ get_url(path='@/hosting.md') }}" class="nav-link">Hosting</a></li>
                     <li><a href="{{ get_url(path='@/domains.md') }}" class="nav-link">Domains</a></li>
                     <li><a href="{{ get_url(path='@/contact.md') }}" class="nav-link">Contact</a></li>
-                    <li><a href="{{ get_url(path='@/dashboard.md') }}" class="btn btn-primary btn-sm">Get Started</a></li>
+                    <li><a href="{{ get_url(path='@/dashboard.md') }}" class="btn btn-primary btn-sm">Get Started</a>
+                    </li>
                 </ul>
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     <span class="bar"></span>
@@ -148,7 +147,7 @@
     </footer>
 
     {# Enterprise Scripts (SRI hash would typically be here in full prod) #}
-    <script src="{{ get_url(path="js/script.js") }}"></script>
+    <script src="{{ get_url(path=" js/script.js") }}"></script>
 </body>
 
 </html>
