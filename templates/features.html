@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block title %}Solutions & Features - {{ config.title }}{% endblock title %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero solutions-hero">
+    <div class="hero-content container">
+        <div class="hero-text">
+            <h1>Enterprise Solutions & Features</h1>
+            <p>Discover our comprehensive suite of technology solutions designed to accelerate your digital transformation and drive business growth.</p>
+            <div class="hero-buttons">
+                <a href="{{ get_url(path='@/pricing.md') }}" class="btn btn-primary btn-lg">View Pricing</a>
+                <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-secondary btn-lg">Talk to Experts</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{ get_url(path="assets/images/products/product-showcase.jpg") }}" alt="Nashedy Solutions" class="hero-img">
+        </div>
+    </div>
+</section>
+
+<!-- Solutions Overview -->
+<section class="section solutions-overview">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Technology Solutions</h2>
+            <p>Comprehensive platforms and services for modern enterprises</p>
+        </div>
+        <div class="solutions-grid">
+            <div class="solution-card">
+                <div class="solution-icon">💻</div>
+                <h3>API Development Platform</h3>
+                <p>Build, deploy, and manage scalable APIs with our enterprise-grade development platform. Includes built-in monitoring, security, and documentation tools.</p>
+                <ul class="solution-features">
+                    <li>REST/GraphQL API Builder</li>
+                    <li>Real-time Monitoring</li>
+                    <li>Auto Documentation</li>
+                    <li>Rate Limiting & Security</li>
+                </ul>
+                <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+            
+            <div class="solution-card">
+                <div class="solution-icon">☁️</div>
+                <h3>Cloud Infrastructure</h3>
+                <p>Secure, scalable cloud hosting with global CDN, automatic scaling, and enterprise-grade security compliance.</p>
+                <ul class="solution-features">
+                    <li>Global Edge Network</li>
+                    <li>Auto Scaling</li>
+                    <li>DDoS Protection</li>
+                    <li>99.99% Uptime SLA</li>
+                </ul>
+                <a href="{{ get_url(path='@/hosting.md') }}" class="btn btn-outline-primary">Explore Hosting</a>
+            </div>
+            
+            <div class="solution-card">
+                <div class="solution-icon">🔒</div>
+                <h3>Security Suite</h3>
+                <p>End-to-end security solutions including threat detection, compliance monitoring, and incident response.</p>
+                <ul class="solution-features">
+                    <li>Threat Intelligence</li>
+                    <li>Compliance Automation</li>
+                    <li>Incident Response</li>
+                    <li>Vulnerability Scanning</li>
+                </ul>
+                <a href="#" class="btn btn-outline-primary">View Security</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Stack -->
+<section class="section tech-stack">
+    <div class="container">
+        <div class="section-header">
+            <h2>Built with Modern Technology</h2>
+            <p>Enterprise-grade stack powering our solutions</p>
+        </div>
+        <div class="tech-stack-grid">
+            <div class="tech-item">
+                <div class="tech-logo">🦀</div>
+                <h4>Rust</h4>
+                <p>Blazing fast performance with memory safety guarantees</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-logo">🌐</div>
+                <h4>WebAssembly</h4>
+                <p>Near-native performance for web applications</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-logo">🐳</div>
+                <h4>Docker/Kubernetes</h4>
+                <p>Container orchestration for scalable deployments</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-logo">🔄</div>
+                <h4>CI/CD Pipeline</h4>
+                <p>Automated testing and deployment workflows</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Integration Capabilities -->
+<section class="section integrations">
+    <div class="container">
+        <div class="section-header">
+            <h2>Seamless Integrations</h2>
+            <p>Connect with your existing tools and workflows</p>
+        </div>
+        <div class="integrations-grid">
+            <div class="integration-category">
+                <h3>Development Tools</h3>
+                <div class="integration-logos">
+                    <div class="integration-logo">GitHub</div>
+                    <div class="integration-logo">GitLab</div>
+                    <div class="integration-logo">Bitbucket</div>
+                </div>
+            </div>
+            <div class="integration-category">
+                <h3>Monitoring</h3>
+                <div class="integration-logos">
+                    <div class="integration-logo">Datadog</div>
+                    <div class="integration-logo">New Relic</div>
+                    <div class="integration-logo">Prometheus</div>
+                </div>
+            </div>
+            <div class="integration-category">
+                <h3>Communication</h3>
+                <div class="integration-logos">
+                    <div class="integration-logo">Slack</div>
+                    <div class="integration-logo">Discord</div>
+                    <div class="integration-logo">Teams</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Transform Your Technology Stack?</h2>
+        <p>Join thousands of developers and enterprises building the future with Nashedy</p>
+        <div class="cta-buttons">
+            <a href="{{ get_url(path='@/dashboard.md') }}" class="btn btn-primary btn-lg">Get Started Free</a>
+            <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-secondary btn-lg">Schedule Demo</a>
+        </div>
+    </div>
+</section>
+{% endblock content %}

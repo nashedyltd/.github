@@ -1,50 +1,257 @@
 {% extends "base.html" %}
 
+{% block title %}{{ config.title }}{% endblock title %}
+
 {% block content %}
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero home-hero">
     <div class="hero-content container">
         <div class="hero-text">
-            <h1>{{ page.extra.hero_title | default(value="Building the Future with Technology and Science") }}</h1>
-            <p>{{ page.extra.hero_description | default(value="We design, build, and manage high-performance software, hardware, and APIs — creating ecosystems that connect technology with real human and business needs across Africa and globally.") }}</p>
+            <h1>Building the Future with Technology and Science</h1>
+            <p>Nashedy delivers sovereign-grade secure systems, powerful APIs, and enterprise infrastructure for Africa and the global market.</p>
             <div class="hero-buttons">
-                <a href="dashboard.html" class="btn btn-primary btn-lg">Get Started</a>
-                <a href="features.html" class="btn btn-secondary btn-lg">Our Solutions</a>
+                <a href="{{ get_url(path='@/features.md') }}" class="btn btn-primary btn-lg">Explore Solutions</a>
+                <a href="{{ get_url(path='@/dashboard.md') }}" class="btn btn-secondary btn-lg">Get Started Free</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number" data-target="5000">5000+</div>
+                    <div class="stat-label">Projects Deployed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-target="25">25+</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
             </div>
         </div>
         <div class="hero-image">
-            <img src="{{ get_url(path="assets/images/hero-pattern.svg") }}" alt="Nashedy Technology Platform" class="hero-img">
+            <img src="{{ get_url(path="assets/images/sliders/ales-nesetril-Im7lZjxeLhg-unsplash.jpg") }}" alt="Nashedy Technology" class="hero-img">
         </div>
     </div>
 </section>
 
-<!-- About Nashedy Section -->
-<section class="section">
+<!-- Services Overview -->
+<section class="section services-overview">
     <div class="container">
         <div class="section-header">
-            <h2>About Nashedy</h2>
-            <p>Building technology-driven ecosystems that solve humanity's hardest problems</p>
+            <h2>Enterprise-Grade Solutions</h2>
+            <p>Comprehensive technology services built with security and performance at the core</p>
         </div>
-        <div class="about-content">
-            <div class="about-image">
-                <img src="{{ get_url(path="assets/images/team/team-office.jpg") }}" alt="Nashedy Team" class="about-img">
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>API Platform</h3>
+                <p>Build, deploy, and scale APIs with our enterprise-grade development platform. REST, GraphQL, and WebSocket support.</p>
+                <a href="{{ get_url(path='@/features.md') }}" class="service-link">Learn More →</a>
             </div>
-            <div class="about-text">
-                <div class="about-cards">
-                    <div class="about-card">
-                        <div class="card-icon">🏢</div>
-                        <h3>Our Core Purpose</h3>
-                        <p>To build technology-driven ecosystems that solve humanity's hardest problems — from energy and communication to healthcare, agriculture, and data systems — while empowering developers, creators, and innovators across all levels of society.</p>
+            <div class="service-card">
+                <div class="service-icon">☁️</div>
+                <h3>Cloud Hosting</h3>
+                <p>Blazing fast, secure cloud infrastructure with global CDN, auto-scaling, and 99.99% uptime guarantee.</p>
+                <a href="{{ get_url(path='@/hosting.md') }}" class="service-link">Explore Hosting →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Domain Services</h3>
+                <p>Register and manage domains with enterprise DNS, DNSSEC, and comprehensive domain management tools.</p>
+                <a href="{{ get_url(path='@/domains.md') }}" class="service-link">Find Domains →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔒</div>
+                <h3>Security Suite</h3>
+                <p>Protect your applications with our comprehensive security solutions including WAF, DDoS protection, and monitoring.</p>
+                <a href="{{ get_url(path='@/features.md') }}" class="service-link">View Security →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Stack -->
+<section class="section tech-showcase">
+    <div class="container">
+        <div class="tech-content">
+            <div class="tech-text">
+                <h2>Built with Modern Technology</h2>
+                <p>Our platform is engineered using cutting-edge technologies that prioritize performance, security, and reliability.</p>
+                <div class="tech-features">
+                    <div class="tech-feature">
+                        <div class="tech-icon">🦀</div>
+                        <div class="tech-info">
+                            <h4>Rust Backend</h4>
+                            <p>Memory-safe, blazing fast performance with zero runtime overhead</p>
+                        </div>
                     </div>
-                    <div class="about-card">
-                        <div class="card-icon">🌍</div>
-                        <h3>African-Centered Innovation</h3>
-                        <p>Founded with a vision to bridge the technology gap in Africa, we are committed to building products and services that empower individuals, strengthen communities, and drive economic growth across the continent and beyond.</p>
+                    <div class="tech-feature">
+                        <div class="tech-icon">🌐</div>
+                        <div class="tech-info">
+                            <h4>WebAssembly</h4>
+                            <p>Near-native performance for web applications and edge computing</p>
+                        </div>
                     </div>
-                    <div class="about-card">
-                        <div class="card-icon">🔬</div>
-                        <h3>Advanced Engineering</h3>
-                        <p>Our ecosystem unites advanced engineering, artificial intelligence, and scientific research to deliver world-class products, platforms, and developer tools for startups, businesses, and enterprises globally.</p>
+                    <div class="tech-feature">
+                        <div class="tech-icon">🐳</div>
+                        <div class="tech-info">
+                            <h4>Container Native</h4>
+                            <p>Docker and Kubernetes orchestration for seamless scaling</p>
+                        </div>
+                    </div>
+                    <div class="tech-feature">
+                        <div class="tech-icon">🔐</div>
+                        <div class="tech-info">
+                            <h4>Zero-Trust Security</h4>
+                            <p>Enterprise-grade security architecture from the ground up</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-image">
+                <img src="{{ get_url(path="assets/images/sliders/joshua-sortino-LqKhnDzSF-8-unsplash.jpg") }}" alt="Technology Stack" class="tech-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Highlight -->
+<section class="section features-highlight">
+    <div class="container">
+        <div class="section-header">
+            <h2>Why Choose Nashedy?</h2>
+            <p>Trusted by developers and enterprises across the globe</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Sub-50ms global response times with our edge network spanning 50+ locations worldwide.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Enterprise Security</h3>
+                <p>SOC 2 compliant infrastructure with automatic threat detection and mitigation.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Auto Scaling</h3>
+                <p>Intelligent resource scaling that handles traffic spikes without manual intervention.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>Developer First</h3>
+                <p>Comprehensive APIs, SDKs, and documentation to accelerate your development workflow.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Global Reach</h3>
+                <p>Infrastructure optimized for Africa and global markets with local edge presence.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Cost Effective</h3>
+                <p>Pay-as-you-go pricing with no hidden fees. Save up to 60% vs traditional providers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Preview -->
+<section class="section pricing-preview">
+    <div class="container">
+        <div class="section-header">
+            <h2>Simple, Transparent Pricing</h2>
+            <p>Choose the plan that fits your needs. All plans include enterprise-grade security.</p>
+        </div>
+        <div class="pricing-preview-grid">
+            <div class="pricing-preview-card">
+                <h3>Starter</h3>
+                <div class="price">
+                    <span class="amount">$29</span>
+                    <span class="period">/month</span>
+                </div>
+                <p>Perfect for small projects</p>
+                <ul>
+                    <li>Up to 5 projects</li>
+                    <li>10GB storage</li>
+                    <li>Basic support</li>
+                </ul>
+                <a href="{{ get_url(path='@/pricing.md') }}" class="btn btn-outline-primary">View Details</a>
+            </div>
+            <div class="pricing-preview-card featured">
+                <div class="popular-badge">Most Popular</div>
+                <h3>Professional</h3>
+                <div class="price">
+                    <span class="amount">$99</span>
+                    <span class="period">/month</span>
+                </div>
+                <p>For growing teams</p>
+                <ul>
+                    <li>Unlimited projects</li>
+                    <li>100GB storage</li>
+                    <li>Priority support</li>
+                </ul>
+                <a href="{{ get_url(path='@/dashboard.md') }}" class="btn btn-primary">Get Started</a>
+            </div>
+            <div class="pricing-preview-card">
+                <h3>Enterprise</h3>
+                <div class="price">
+                    <span class="amount">Custom</span>
+                </div>
+                <p>For large organizations</p>
+                <ul>
+                    <li>Unlimited everything</li>
+                    <li>Dedicated support</li>
+                    <li>Custom SLA</li>
+                </ul>
+                <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-outline-primary">Contact Sales</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2>Trusted by Innovators</h2>
+            <p>See what our clients say about building with Nashedy</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"Nashedy transformed our infrastructure. We reduced latency by 70% and scaled seamlessly across Africa."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">👤</div>
+                    <div class="author-info">
+                        <div class="author-name">Tech Startup CEO</div>
+                        <div class="author-company">Lagos, Nigeria</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"The developer experience is unmatched. Their Rust-based APIs are incredibly fast and reliable."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">👤</div>
+                    <div class="author-info">
+                        <div class="author-name">Senior Developer</div>
+                        <div class="author-company">Berlin, Germany</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"Enterprise-grade security without the enterprise complexity. Exactly what our fintech needed."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">👤</div>
+                    <div class="author-info">
+                        <div class="author-name">CTO</div>
+                        <div class="author-company">Nairobi, Kenya</div>
                     </div>
                 </div>
             </div>
@@ -52,184 +259,30 @@
     </div>
 </section>
 
-<!-- Our Divisions -->
-<section class="section divisions-section">
+<!-- Newsletter -->
+<section class="section newsletter-section">
     <div class="container">
-        <div class="section-header">
-            <h2>Our Divisions</h2>
-            <p>The specialized arms driving our innovation and impact</p>
-        </div>
-        <div class="divisions-grid">
-            <div class="division-card">
-                <div class="division-image">
-                    <img src="{{ get_url(path="assets/images/products/ai-technology.jpg") }}" alt="Nashedy Technologies" class="division-img">
-                </div>
-                <div class="division-content">
-                    <div class="division-icon">🧠</div>
-                    <h3>Nashedy Technologies</h3>
-                    <p>Core R&D arm developing APIs, devkits, cloud tools, and enterprise solutions across multiple sectors — from fintech and AI to industrial automation and communication infrastructure.</p>
-                </div>
+        <div class="newsletter-content">
+            <div class="newsletter-text">
+                <h2>Stay Updated</h2>
+                <p>Get the latest news, product updates, and technical insights delivered to your inbox.</p>
             </div>
-            <div class="division-card">
-                <div class="division-image">
-                    <img src="{{ get_url(path="assets/images/software-development.png") }}" alt="Nashedy Systems" class="division-img">
-                </div>
-                <div class="division-content">
-                    <div class="division-icon">⚙️</div>
-                    <h3>Nashedy Systems</h3>
-                    <p>Focuses on hardware, IoT, and scientific products — including smart devices for agriculture, healthcare, and energy monitoring, all built for reliability and scalability.</p>
-                </div>
-            </div>
-            <div class="division-card">
-                <div class="division-image">
-                    <img src="{{ get_url(path="assets/images/research-innovation.png") }}" alt="Nashedy Labs" class="division-img">
-                </div>
-                <div class="division-content">
-                    <div class="division-icon">🔬</div>
-                    <h3>Nashedy Labs</h3>
-                    <p>The innovation lab — driving AI research, blockchain exploration, and next-gen computing solutions, merging theoretical science with practical engineering.</p>
-                </div>
-            </div>
+            <form id="newsletter-form" class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" class="form-input" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
         </div>
     </div>
 </section>
 
-<!-- What We Build -->
-<section class="section what-we-build">
-    <div class="container">
-        <div class="section-header">
-            <h2>What We Build</h2>
-            <p>Creating technology solutions that drive innovation and impact</p>
-        </div>
-        <div class="build-grid">
-            <div class="build-item">
-                <div class="build-icon">💻</div>
-                <h3>Software & API Development</h3>
-                <p>Building enterprise-grade APIs, devkits, and tools for scalable applications that power modern businesses.</p>
-                <img src="{{ get_url(path="assets/images/features/software-development.jpg") }}" alt="Software Development" class="build-img">
-            </div>
-            <div class="build-item">
-                <div class="build-icon">🔧</div>
-                <h3>Hardware & Device Systems</h3>
-                <p>Designing IoT, agricultural, and medical technology for emerging markets with focus on accessibility.</p>
-                <img src="{{ get_url(path="assets/images/hardware-development.png") }}" alt="Hardware Development" class="build-img">
-            </div>
-            <div class="build-item">
-                <div class="build-icon">🚀</div>
-                <h3>Startup Development & Investment</h3>
-                <p>Creating, funding, and managing innovative startups through the Nashedy ecosystem for scalable growth.</p>
-                <img src="{{ get_url(path="assets/images/startup-incubation.png") }}" alt="Startup Development" class="build-img">
-            </div>
-            <div class="build-item">
-                <div class="build-icon">☁️</div>
-                <h3>Digital Infrastructure</h3>
-                <p>Providing secure cloud, fintech, and web infrastructure for enterprises to operate efficiently.</p>
-                <img src="{{ get_url(path="assets/images/products/product-showcase.jpg") }}" alt="Digital Infrastructure" class="build-img">
-            </div>
-            <div class="build-item">
-                <div class="build-icon">🤖</div>
-                <h3>AI & Research</h3>
-                <p>Developing intelligent systems for automation, language, voice, and data analytics to solve complex problems.</p>
-                <img src="{{ get_url(path="assets/images/products/ai-technology.jpg") }}" alt="AI Research" class="build-img">
-            </div>
-            <div class="build-item">
-                <div class="build-icon">🌍</div>
-                <h3>African-Centered Solutions</h3>
-                <p>Building technology solutions specifically designed for African markets and communities with local insights.</p>
-                <img src="{{ get_url(path="assets/images/software-development.png") }}" alt="African Solutions" class="build-img">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Vision & Mission -->
-<section class="section vision-mission">
-    <div class="container">
-        <div class="section-header">
-            <h2>Our Vision & Mission</h2>
-            <p>Creating a smarter future for all through technology and innovation</p>
-        </div>
-        <div class="vision-mission-content">
-            <div class="vision-card">
-                <div class="vision-image">
-                    <img src="{{ get_url(path="assets/images/sliders/joshua-sortino-LqKhnDzSF-8-unsplash.jpg") }}" alt="Our Vision" class="vision-img">
-                </div>
-                <div class="vision-text">
-                    <div class="vision-icon">🎯</div>
-                    <h3>Our Vision</h3>
-                    <p>"To solve Africa's and the world's most complex problems using technology, science, and innovation, creating sustainable impact and a smarter future."</p>
-                </div>
-            </div>
-            <div class="mission-card">
-                <div class="mission-image">
-                    <img src="{{ get_url(path="assets/images/sliders/marvin-meyer-SYTO3xs06fU-unsplash.jpg") }}" alt="Our Mission" class="mission-img">
-                </div>
-                <div class="mission-text">
-                    <div class="mission-icon">🚀</div>
-                    <h3>Our Mission</h3>
-                    <p>To design, engineer, and scale technologies that bridge innovation, science, and human development — making Nashedy a trusted foundation for progress, impact, and global transformation.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Our Approach -->
-<section class="section approach-section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Our Approach</h2>
-            <p>How we build and deploy world-class technology solutions</p>
-        </div>
-        <div class="approach-grid">
-            <div class="approach-item">
-                <div class="approach-image">
-                    <img src="{{ get_url(path="assets/images/sliders/ales-nesetril-Im7lZjxeLhg-unsplash.jpg") }}" alt="Think Deeply" class="approach-img">
-                </div>
-                <div class="approach-content">
-                    <h3>Think Deeply</h3>
-                    <p>Analyze systems and data before creating solutions. We research thoroughly, understand problems completely, and design with purpose and precision.</p>
-                </div>
-            </div>
-            <div class="approach-item">
-                <div class="approach-image">
-                    <img src="{{ get_url(path="assets/images/sliders/alessandro-bianchi-_kdTyfnUFAc-unsplash.jpg") }}" alt="Build Precisely" class="approach-img">
-                </div>
-                <div class="approach-content">
-                    <h3>Build Precisely</h3>
-                    <p>Engineer with scalability and security at core. Every line of code, every component, every system is built to last and scale globally.</p>
-                </div>
-            </div>
-            <div class="approach-item">
-                <div class="approach-image">
-                    <img src="{{ get_url(path="assets/images/sliders/paul-calescu-KW3m50XRhjk-unsplash.jpg") }}" alt="Test Relentlessly" class="approach-img">
-                </div>
-                <div class="approach-content">
-                    <h3>Test Relentlessly</h3>
-                    <p>Rigorous testing before public launch. We validate every feature, stress-test every system, and ensure reliability at every level.</p>
-                </div>
-            </div>
-            <div class="approach-item">
-                <div class="approach-image">
-                    <img src="{{ get_url(path="assets/images/sliders/surface-xSiQBSq-I0M-unsplash.jpg") }}" alt="Deploy Globally" class="approach-img">
-                </div>
-                <div class="approach-content">
-                    <h3>Deploy Globally</h3>
-                    <p>Local and international environments simultaneously. Our solutions work seamlessly across continents, cultures, and contexts.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Call to Action -->
+<!-- CTA Section -->
 <section class="cta-section">
     <div class="container">
-        <h2>Ready to Transform Your Business?</h2>
-        <p>Join developers, researchers, and organizations building the next generation of technology solutions with Nashedy</p>
+        <h2>Ready to Build the Future?</h2>
+        <p>Join thousands of developers and enterprises building amazing applications with Nashedy</p>
         <div class="cta-buttons">
-            <a href="dashboard.html" class="btn btn-primary btn-lg">Get Started</a>
-            <a href="contact.html" class="btn btn-secondary btn-lg">Contact Us</a>
+            <a href="{{ get_url(path='@/dashboard.md') }}" class="btn btn-primary btn-lg">Start Free Trial</a>
+            <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-secondary btn-lg">Talk to Sales</a>
         </div>
     </div>
 </section>

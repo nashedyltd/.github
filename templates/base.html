@@ -6,8 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    {# Strict Content Security Policy #}
+    {# Enhanced Security Headers #}
+    {% if config.extra.csp_policy %}
     <meta http-equiv="Content-Security-Policy" content="{{ config.extra.csp_policy }}">
+    {% endif %}
+    {% if config.extra.strict_transport_security %}
+    <meta http-equiv="Strict-Transport-Security" content="{{ config.extra.strict_transport_security }}">
+    {% endif %}
+    {% if config.extra.x_content_type_options %}
+    <meta http-equiv="X-Content-Type-Options" content="{{ config.extra.x_content_type_options }}">
+    {% endif %}
+    {% if config.extra.x_frame_options %}
+    <meta http-equiv="X-Frame-Options" content="{{ config.extra.x_frame_options }}">
+    {% endif %}
+    {% if config.extra.referrer_policy %}
+    <meta name="referrer" content="{{ config.extra.referrer_policy }}">
+    {% endif %}
+    {% if config.extra.permissions_policy %}
+    <meta http-equiv="Permissions-Policy" content="{{ config.extra.permissions_policy }}">
+    {% endif %}
 
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
@@ -59,14 +76,14 @@
                     </form>
                 </div>
                 <ul class="navbar-nav">
-                    <li><a href="{{ get_url(path="/") }}" class="nav-link">Home</a></li>
-                    <li><a href="features.html" class="nav-link">Solutions</a></li>
-                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="hosting.html" class="nav-link">Hosting</a></li>
-                    <li><a href="domains.html" class="nav-link">Domains</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="dashboard.html" class="btn btn-primary btn-sm">Get Started</a></li>
+                    <li><a href="{{ get_url(path='/') }}" class="nav-link">Home</a></li>
+                    <li><a href="{{ get_url(path='@/features.md') }}" class="nav-link">Solutions</a></li>
+                    <li><a href="{{ get_url(path='@/pricing.md') }}" class="nav-link">Pricing</a></li>
+                    <li><a href="{{ get_url(path='@/about.md') }}" class="nav-link">About</a></li>
+                    <li><a href="{{ get_url(path='@/hosting.md') }}" class="nav-link">Hosting</a></li>
+                    <li><a href="{{ get_url(path='@/domains.md') }}" class="nav-link">Domains</a></li>
+                    <li><a href="{{ get_url(path='@/contact.md') }}" class="nav-link">Contact</a></li>
+                    <li><a href="{{ get_url(path='@/dashboard.md') }}" class="btn btn-primary btn-sm">Get Started</a></li>
                 </ul>
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     <span class="bar"></span>
@@ -96,18 +113,18 @@
                 <div class="footer-section">
                     <h4>Solutions</h4>
                     <ul class="footer-links">
-                        <li><a href="features.html">Runtime & Modules</a></li>
-                        <li><a href="pricing.html">Pricing Plans</a></li>
-                        <li><a href="dashboard.html">Platform Access</a></li>
-                        <li><a href="hosting.html">Infrastructure</a></li>
-                        <li><a href="domains.html">Domain Services</a></li>
+                        <li><a href="{{ get_url(path='@/features.md') }}">Runtime & Modules</a></li>
+                        <li><a href="{{ get_url(path='@/pricing.md') }}">Pricing Plans</a></li>
+                        <li><a href="{{ get_url(path='@/dashboard.md') }}">Platform Access</a></li>
+                        <li><a href="{{ get_url(path='@/hosting.md') }}">Infrastructure</a></li>
+                        <li><a href="{{ get_url(path='@/domains.md') }}">Domain Services</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Nashedy</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="{{ get_url(path='@/about.md') }}">About Nashedy</a></li>
+                        <li><a href="{{ get_url(path='@/contact.md') }}">Contact Us</a></li>
                         <li><a href="https://github.com/nashedyltd" target="_blank" rel="noopener">Open Source</a></li>
                         <li><a href="#">Developer Resources</a></li>
                         <li><a href="#">Community</a></li>

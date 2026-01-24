@@ -1,0 +1,48 @@
+name: Nashedy Zero-Trust Build - Netlify Deployment
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source (Hidden Practice)
+        uses: actions/checkout@v4
+
+      - name: Setup Zola (Rust SSG)
+        uses: shalzz/zola-deploy-action@v0.18.0
+        env:
+          # Token to deploy to gh-pages
+          PAGES_BRANCH: gh-pages
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Zero Trust: Build from root (Clean Repo)
+          
+      # Verification Step: Ensure no internal docs leaked
+      - name: Verify Build Artifacts
+        run: |
+          if [ -d "public/update" ]; then
+            echo "CRITICAL SECURITY FAILURE: Internal docs 'update/' found in build output."
+            exit 1
+          fi
+          echo "Security Verification Passed: Internal docs are hidden."
+
+      # Deploy to Netlify
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v2.0
+        with:
+          publish-dir: './public'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: false
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

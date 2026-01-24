@@ -1,7 +1,7 @@
 # Nashedy - Zola Configuration
 # Zero Trust & Enterprise Security Standards
 
-base_url = "https://nashedyltd.github.io"
+base_url = "http://127.0.0.1:1111"
 title = "Nashedy - Building the Future with Technology and Science"
 description = "Nashedy: Sovereign-grade secure systems, hardware, and APIs."
 default_language = "en"
@@ -18,6 +18,13 @@ organization = "Nashedy Ltd"
 version = "2.0.0-Rust-Sovereign"
 author = "Shedrack Erhabor"
 
-# Security Headers (Strict CSP)
+# Enhanced Security Headers (Strict CSP)
 # Note: These are applied via HTML meta tags in templates, but defined here for central management
-csp_policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
+csp_policy = "default-src 'self' http://127.0.0.1:* http://localhost:*; script-src 'self' 'unsafe-inline' http://127.0.0.1:* http://localhost:*; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: http:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' http://127.0.0.1:* http://localhost:* https://api.nashedy.io; object-src 'none'; base-uri 'self'; form-action 'self';"
+
+# Additional Security Headers
+strict_transport_security = "max-age=31536000; includeSubDomains; preload"
+x_content_type_options = "nosniff"
+x_frame_options = "DENY"
+referrer_policy = "strict-origin-when-cross-origin"
+permissions_policy = "geolocation=(), microphone=(), camera=()"

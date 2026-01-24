@@ -1,0 +1,44 @@
+name: Nashedy Zero-Trust Build - Vercel Deployment
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source (Hidden Practice)
+        uses: actions/checkout@v4
+
+      - name: Setup Zola (Rust SSG)
+        uses: shalzz/zola-deploy-action@v0.18.0
+        env:
+          # Token to deploy to gh-pages
+          PAGES_BRANCH: gh-pages
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Zero Trust: Build from root (Clean Repo)
+          
+      # Verification Step: Ensure no internal docs leaked
+      - name: Verify Build Artifacts
+        run: |
+          if [ -d "public/update" ]; then
+            echo "CRITICAL SECURITY FAILURE: Internal docs 'update/' found in build output."
+            exit 1
+          fi
+          echo "Security Verification Passed: Internal docs are hidden."
+
+      # Deploy to Vercel
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+          working-directory: .
+          github-token: ${{ secrets.GITHUB_TOKEN }}

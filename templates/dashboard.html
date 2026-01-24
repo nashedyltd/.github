@@ -1,0 +1,259 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - {{ config.title }}{% endblock title %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero dashboard-hero">
+    <div class="hero-content container">
+        <div class="hero-text">
+            <h1>Welcome to Your Dashboard</h1>
+            <p>Manage your projects, monitor performance, and access all Nashedy services in one place.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Active Projects</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">API Calls Today</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">System Uptime</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{ get_url(path="assets/images/products/product-showcase.jpg") }}" alt="Dashboard" class="hero-img">
+        </div>
+    </div>
+</section>
+
+<!-- Quick Actions -->
+<section class="section quick-actions">
+    <div class="container">
+        <div class="section-header">
+            <h2>Quick Actions</h2>
+            <p>Get started with common tasks</p>
+        </div>
+        <div class="actions-grid">
+            <a href="#" class="action-card">
+                <div class="action-icon">🚀</div>
+                <h3>Create New Project</h3>
+                <p>Start building your next application</p>
+            </a>
+            <a href="#" class="action-card">
+                <div class="action-icon">📊</div>
+                <h3>View Analytics</h3>
+                <p>Monitor your application performance</p>
+            </a>
+            <a href="#" class="action-card">
+                <div class="action-icon">⚙️</div>
+                <h3>Configure Settings</h3>
+                <p>Manage your account preferences</p>
+            </a>
+            <a href="#" class="action-card">
+                <div class="action-icon">📚</div>
+                <h3>Documentation</h3>
+                <p>Access guides and API references</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Overview -->
+<section class="section projects-overview">
+    <div class="container">
+        <div class="section-header">
+            <h2>Your Projects</h2>
+            <div class="header-actions">
+                <a href="#" class="btn btn-primary btn-sm">New Project</a>
+            </div>
+        </div>
+        <div class="projects-container">
+            <div class="empty-state" id="empty-projects">
+                <div class="empty-icon">📁</div>
+                <h3>No Projects Yet</h3>
+                <p>Get started by creating your first project</p>
+                <button class="btn btn-primary">Create Project</button>
+            </div>
+            <div class="projects-grid" id="projects-grid" style="display: none;">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Activity -->
+<section class="section recent-activity">
+    <div class="container">
+        <div class="section-header">
+            <h2>Recent Activity</h2>
+            <a href="#" class="view-all">View All</a>
+        </div>
+        <div class="activity-feed">
+            <div class="activity-item">
+                <div class="activity-icon">✅</div>
+                <div class="activity-content">
+                    <div class="activity-title">Project "MyApp" created successfully</div>
+                    <div class="activity-time">2 minutes ago</div>
+                </div>
+            </div>
+            <div class="activity-item">
+                <div class="activity-icon">🔄</div>
+                <div class="activity-content">
+                    <div class="activity-title">API deployment completed</div>
+                    <div class="activity-time">15 minutes ago</div>
+                </div>
+            </div>
+            <div class="activity-item">
+                <div class="activity-icon">📊</div>
+                <div class="activity-content">
+                    <div class="activity-title">Monthly usage report generated</div>
+                    <div class="activity-time">1 hour ago</div>
+                </div>
+            </div>
+            <div class="activity-item">
+                <div class="activity-icon">🔔</div>
+                <div class="activity-content">
+                    <div class="activity-title">Security alert: New login detected</div>
+                    <div class="activity-time">3 hours ago</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resource Usage -->
+<section class="section resource-usage">
+    <div class="container">
+        <div class="section-header">
+            <h2>Resource Usage</h2>
+            <p>Monitor your consumption and plan accordingly</p>
+        </div>
+        <div class="usage-grid">
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>API Calls</h3>
+                    <div class="usage-percentage">75%</div>
+                </div>
+                <div class="usage-bar">
+                    <div class="usage-progress" style="width: 75%"></div>
+                </div>
+                <div class="usage-stats">
+                    <span class="current">75,000</span>
+                    <span class="limit">/ 100,000</span>
+                </div>
+            </div>
+            
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>Storage</h3>
+                    <div class="usage-percentage">42%</div>
+                </div>
+                <div class="usage-bar">
+                    <div class="usage-progress" style="width: 42%"></div>
+                </div>
+                <div class="usage-stats">
+                    <span class="current">42 GB</span>
+                    <span class="limit">/ 100 GB</span>
+                </div>
+            </div>
+            
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>Bandwidth</h3>
+                    <div class="usage-percentage">18%</div>
+                </div>
+                <div class="usage-bar">
+                    <div class="usage-progress" style="width: 18%"></div>
+                </div>
+                <div class="usage-stats">
+                    <span class="current">180 GB</span>
+                    <span class="limit">/ 1 TB</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Support Section -->
+<section class="section dashboard-support">
+    <div class="container">
+        <div class="support-content">
+            <div class="support-text">
+                <h2>Need Help?</h2>
+                <p>Our support team is here to assist you with any questions or issues you might encounter.</p>
+                <div class="support-options">
+                    <div class="support-option">
+                        <div class="option-icon">💬</div>
+                        <div class="option-content">
+                            <h4>Live Chat</h4>
+                            <p>Get instant help during business hours</p>
+                        </div>
+                    </div>
+                    <div class="support-option">
+                        <div class="option-icon">📚</div>
+                        <div class="option-content">
+                            <h4>Documentation</h4>
+                            <p>Comprehensive guides and tutorials</p>
+                        </div>
+                    </div>
+                    <div class="support-option">
+                        <div class="option-icon">🎓</div>
+                        <div class="option-content">
+                            <h4>Training</h4>
+                            <p>Professional training and workshops</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="support-cta">
+                <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Contact Support</a>
+                <a href="#" class="btn btn-secondary btn-lg">View Documentation</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Notifications -->
+<div class="notifications-container" id="notifications">
+    <!-- Notifications will appear here dynamically -->
+</div>
+
+<!-- Modal Templates -->
+<div class="modal" id="create-project-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Create New Project</h2>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="project-form">
+                <div class="form-group">
+                    <label for="project-name">Project Name</label>
+                    <input type="text" id="project-name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="project-description">Description</label>
+                    <textarea id="project-description" class="form-input" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="project-template">Template</label>
+                    <select id="project-template" class="form-input">
+                        <option value="blank">Blank Project</option>
+                        <option value="web-api">Web API</option>
+                        <option value="microservice">Microservice</option>
+                        <option value="static-site">Static Site</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Project</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

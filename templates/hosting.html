@@ -1,0 +1,297 @@
+{% extends "base.html" %}
+
+{% block title %}Cloud Hosting - {{ config.title }}{% endblock title %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero hosting-hero">
+    <div class="hero-content container">
+        <div class="hero-text">
+            <h1>Enterprise Cloud Hosting</h1>
+            <p>Blazing fast, secure, and scalable cloud infrastructure built for modern applications. Powered by Rust and WebAssembly.</p>
+            <div class="hero-buttons">
+                <a href="{{ get_url(path='@/dashboard.md') }}" class="btn btn-primary btn-lg">Deploy Now</a>
+                <a href="#plans" class="btn btn-secondary btn-lg">View Plans</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{ get_url(path="assets/images/products/product-showcase.jpg") }}" alt="Cloud Infrastructure" class="hero-img">
+        </div>
+    </div>
+</section>
+
+<!-- Hosting Features -->
+<section class="section hosting-features">
+    <div class="container">
+        <div class="section-header">
+            <h2>Why Choose Nashedy Hosting</h2>
+            <p>Enterprise-grade infrastructure with developer-friendly tools</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Global edge network with sub-50ms response times worldwide. Built with Rust for maximum performance.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Military-Grade Security</h3>
+                <p>Zero-trust architecture with automatic DDoS protection, WAF, and continuous security monitoring.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Auto Scaling</h3>
+                <p>Intelligent auto-scaling that handles traffic spikes automatically without manual intervention.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>High Availability</h3>
+                <p>99.99% uptime guarantee with automatic failover and redundant infrastructure across multiple regions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>Developer Tools</h3>
+                <p>Built-in CI/CD, monitoring dashboards, and one-click deployments for streamlined development workflow.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Cost Effective</h3>
+                <p>Pay-as-you-use pricing with no hidden fees. Save up to 60% compared to traditional cloud providers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Infrastructure Details -->
+<section class="section infrastructure">
+    <div class="container">
+        <div class="infrastructure-content">
+            <div class="infra-text">
+                <h2>Global Infrastructure</h2>
+                <p>Our network spans 50+ edge locations across 6 continents, ensuring optimal performance for users worldwide.</p>
+                <div class="infra-specs">
+                    <div class="spec">
+                        <div class="spec-value">50+</div>
+                        <div class="spec-label">Edge Locations</div>
+                    </div>
+                    <div class="spec">
+                        <div class="spec-value">6</div>
+                        <div class="spec-label">Continents</div>
+                    </div>
+                    <div class="spec">
+                        <div class="spec-value">&lt;50ms</div>
+                        <div class="spec-label">Global Latency</div>
+                    </div>
+                    <div class="spec">
+                        <div class="spec-value">100Gbps</div>
+                        <div class="spec-label">Network Capacity</div>
+                    </div>
+                </div>
+            </div>
+            <div class="infra-map">
+                <div class="world-map">
+                    <!-- Simplified map representation -->
+                    <div class="map-dot" style="top: 30%; left: 20%;">🇺🇸</div>
+                    <div class="map-dot" style="top: 40%; left: 50%;">🇪🇺</div>
+                    <div class="map-dot" style="top: 60%; left: 60%;">🇦🇺</div>
+                    <div class="map-dot" style="top: 50%; left: 70%;">🇯🇵</div>
+                    <div class="map-dot" style="top: 70%; left: 50%;">🇧🇷</div>
+                    <div class="map-dot" style="top: 40%; left: 45%;">🇳🇬</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hosting Plans -->
+<section class="section hosting-plans" id="plans">
+    <div class="container">
+        <div class="section-header">
+            <h2>Flexible Hosting Plans</h2>
+            <p>Scalable solutions for projects of any size</p>
+        </div>
+        <div class="plans-grid">
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>Starter</h3>
+                    <div class="plan-price">
+                        <span class="amount">$15</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <div class="plan-features">
+                    <ul>
+                        <li>1 CPU Core</li>
+                        <li>2GB RAM</li>
+                        <li>50GB SSD Storage</li>
+                        <li>2TB Bandwidth</li>
+                        <li>1 Website</li>
+                        <li>Basic SSL</li>
+                    </ul>
+                </div>
+                <div class="plan-cta">
+                    <a href="{{ get_url(path='@/dashboard.md') }}" class="btn btn-outline-primary">Get Started</a>
+                </div>
+            </div>
+            
+            <div class="plan-card featured">
+                <div class="popular-badge">Popular</div>
+                <div class="plan-header">
+                    <h3>Professional</h3>
+                    <div class="plan-price">
+                        <span class="amount">$45</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <div class="plan-features">
+                    <ul>
+                        <li>4 CPU Cores</li>
+                        <li>8GB RAM</li>
+                        <li>200GB SSD Storage</li>
+                        <li>10TB Bandwidth</li>
+                        <li>10 Websites</li>
+                        <li>Free SSL + CDN</li>
+                        <li>Automatic Backups</li>
+                        <li>Priority Support</li>
+                    </ul>
+                </div>
+                <div class="plan-cta">
+                    <a href="{{ get_url(path='@/dashboard.md') }}" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+            
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>Business</h3>
+                    <div class="plan-price">
+                        <span class="amount">$120</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <div class="plan-features">
+                    <ul>
+                        <li>8 CPU Cores</li>
+                        <li>16GB RAM</li>
+                        <li>500GB SSD Storage</li>
+                        <li>Unlimited Bandwidth</li>
+                        <li>Unlimited Websites</li>
+                        <li>Dedicated SSL + CDN</li>
+                        <li>Daily Backups</li>
+                        <li>24/7 Phone Support</li>
+                        <li>Load Balancing</li>
+                        <li>DDoS Protection</li>
+                    </ul>
+                </div>
+                <div class="plan-cta">
+                    <a href="{{ get_url(path='@/dashboard.md') }}" class="btn btn-outline-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Migration Assistance -->
+<section class="section migration">
+    <div class="container">
+        <div class="migration-content">
+            <div class="migration-text">
+                <h2>Easy Migration</h2>
+                <p>Move your existing applications to Nashedy with zero downtime and our expert migration assistance.</p>
+                <div class="migration-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Assessment</h4>
+                            <p>We analyze your current setup and create a migration plan</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Preparation</h4>
+                            <p>Set up your new environment and test configurations</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Migration</h4>
+                            <p>Seamless transfer with zero downtime guaranteed</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Optimization</h4>
+                            <p>Performance tuning and ongoing support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="migration-image">
+                <img src="{{ get_url(path="assets/images/sliders/paul-calescu-KW3m50XRhjk-unsplash.jpg") }}" alt="Migration Process" class="migration-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technical Specifications -->
+<section class="section tech-specs">
+    <div class="container">
+        <div class="section-header">
+            <h2>Technical Specifications</h2>
+            <p>Enterprise-grade infrastructure details</p>
+        </div>
+        <div class="specs-grid">
+            <div class="spec-category">
+                <h3>Compute</h3>
+                <ul>
+                    <li>Intel Xeon processors</li>
+                    <li>AMD EPYC options</li>
+                    <li>ARM64 support</li>
+                    <li>Container runtime</li>
+                </ul>
+            </div>
+            <div class="spec-category">
+                <h3>Storage</h3>
+                <ul>
+                    <li>NVMe SSD storage</li>
+                    <li>RAID 10 configuration</li>
+                    <li>Automatic snapshots</li>
+                    <li>Object storage available</li>
+                </ul>
+            </div>
+            <div class="spec-category">
+                <h3>Network</h3>
+                <ul>
+                    <li>10Gbps backbone</li>
+                    <li>BGP routing</li>
+                    <li>IPv4 & IPv6</li>
+                    <li>Private networking</li>
+                </ul>
+            </div>
+            <div class="spec-category">
+                <h3>Security</h3>
+                <ul>
+                    <li>Zero-trust architecture</li>
+                    <li>WAF included</li>
+                    <li>DDoS protection</li>
+                    <li>Compliance certified</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Deploy Your Application?</h2>
+        <p>Get started with our free tier or choose the perfect plan for your needs</p>
+        <div class="cta-buttons">
+            <a href="{{ get_url(path='@/dashboard.md') }}" class="btn btn-primary btn-lg">Start Free Trial</a>
+            <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-secondary btn-lg">Talk to Infrastructure Team</a>
+        </div>
+    </div>
+</section>
+{% endblock content %}
