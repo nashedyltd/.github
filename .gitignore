@@ -1,0 +1,25 @@
+# Nashedy Secure Gitignore
+
+# Build Artifacts
+public/
+sass/
+node_modules/
+.DS_Store
+
+# Internal/Sensitive Docs (Double Safety)
+update/
+design.md
+requirements.md
+tasks.md
+NASHEDY_PROJECT_CONTEXT.md
+*.secret
+*.key
+*.pem
+
+# Editor Configs
+.vscode/
+.idea/
+
+# Rust/Zola
+target/
+**/*.bk
