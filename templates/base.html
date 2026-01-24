@@ -13,7 +13,7 @@
 
     <meta name="description" content="{{ config.description }}">
     <meta name="author" content="{{ config.extra.author }}">
-    <link rel="icon" href="{{ get_url(path=" icon.png") }}" type="image/png">
+    <link rel="icon" href="{{ get_url(path="icon.png") }}" type="image/png">
 
     {# Google Fonts - Inter #}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     {# Enterprise Styles #}
-    <link rel="stylesheet" href="{{ get_url(path=" css/styles-enterprise.css") }}">
+    <link rel="stylesheet" href="{{ get_url(path="css/styles-enterprise.css") }}">
 
     {% block head %}{% endblock head %}
 </head>
@@ -43,8 +43,8 @@
     <header class="site-header">
         <nav class="navbar">
             <div class="container">
-                <a href="{{ get_url(path=" /") }}" class="navbar-brand">
-                    <img src="{{ get_url(path=" icon.png") }}" alt="Nashedy Logo" width="32" height="32">
+                <a href="{{ get_url(path="/") }}" class="navbar-brand">
+                    <img src="{{ get_url(path="icon.png") }}" alt="Nashedy Logo" width="32" height="32">
                     <span>Nashedy</span>
                 </a>
                 <div class="navbar-search">
@@ -59,7 +59,7 @@
                     </form>
                 </div>
                 <ul class="navbar-nav">
-                    <li><a href="{{ get_url(path=" /") }}" class="nav-link">Home</a></li>
+                    <li><a href="{{ get_url(path="/") }}" class="nav-link">Home</a></li>
                     <li><a href="features.html" class="nav-link">Solutions</a></li>
                     <li><a href="pricing.html" class="nav-link">Pricing</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
@@ -131,7 +131,7 @@
     </footer>
 
     {# Enterprise Scripts (SRI hash would typically be here in full prod) #}
-    <script src="{{ get_url(path=" js/script.js") }}"></script>
+    <script src="{{ get_url(path="js/script.js") }}"></script>
 </body>
 
 </html>
