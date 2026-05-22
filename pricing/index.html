@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src &#x27;self&#x27; http:&#x2F;&#x2F;127.0.0.1:* http:&#x2F;&#x2F;localhost:*; script-src &#x27;self&#x27; &#x27;unsafe-inline&#x27; http:&#x2F;&#x2F;127.0.0.1:* http:&#x2F;&#x2F;localhost:*; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27; https:&#x2F;&#x2F;fonts.googleapis.com; img-src &#x27;self&#x27; data: https: http:; font-src &#x27;self&#x27; https:&#x2F;&#x2F;fonts.gstatic.com; connect-src &#x27;self&#x27; http:&#x2F;&#x2F;127.0.0.1:* http:&#x2F;&#x2F;localhost:* https:&#x2F;&#x2F;api.nashedy.io; object-src &#x27;none&#x27;; base-uri &#x27;self&#x27;; form-action &#x27;self&#x27;;">
+    
+    
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+
+    
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    
+
+    <title>Pricing Plans - Nashedy - Building the Future with Technology and Science</title>
+
+    <meta name="description" content="Nashedy: Sovereign-grade secure systems, hardware, and APIs.">
+    <meta name="author" content="Shedrack Erhabor">
+    <link rel="icon" href="https://nashedy.netlify.app/ icon.png" type="image/png">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://nashedy.netlify.app/ css/styles-enterprise.css">
+
+    
+</head>
+
+<body>
+    
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience and analyze site usage. By continuing to browse, you agree to
+                our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn btn-primary btn-sm">Accept All</button>
+                <button id="decline-cookies" class="btn btn-secondary btn-sm">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="https://nashedy.netlify.app/ " class="navbar-brand">
+                    <img src="https://nashedy.netlify.app/ icon.png" alt="Nashedy Logo" width="32" height="32">
+                    <span>Nashedy</span>
+                </a>
+                <div class="navbar-search">
+                    <form class="search-form" onsubmit="performWebSearch(event)">
+                        <input type="text" id="search-input" placeholder="Search..." class="search-input">
+                        <button type="submit" class="search-btn" aria-label="Search">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <ul class="navbar-nav">
+                    <li><a href="https://nashedy.netlify.app" class="nav-link">Home</a></li>
+                    <li><a href="https://nashedy.netlify.app/features/" class="nav-link">Solutions</a></li>
+                    <li><a href="https://nashedy.netlify.app/pricing/" class="nav-link">Pricing</a></li>
+                    <li><a href="https://nashedy.netlify.app/about/" class="nav-link">About</a></li>
+                    <li><a href="https://nashedy.netlify.app/hosting/" class="nav-link">Hosting</a></li>
+                    <li><a href="https://nashedy.netlify.app/domains/" class="nav-link">Domains</a></li>
+                    <li><a href="https://nashedy.netlify.app/contact/" class="nav-link">Contact</a></li>
+                    <li><a href="https://nashedy.netlify.app/dashboard/" class="btn btn-primary btn-sm">Get Started</a>
+                    </li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        
+<!-- Hero Section -->
+<section class="hero pricing-hero">
+    <div class="hero-content container">
+        <div class="hero-text">
+            <h1>Simple, Transparent Pricing</h1>
+            <p>Choose the perfect plan for your needs. All plans include enterprise-grade security and 24/7 support.</p>
+            <div class="pricing-toggle">
+                <span class="toggle-label">Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="billing-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label">Annual <span class="save-badge">Save 20%</span></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Plans -->
+<section class="section pricing-section">
+    <div class="container">
+        <div class="pricing-grid">
+            <!-- Starter Plan -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Starter</h3>
+                    <div class="price-container">
+                        <span class="currency">$</span>
+                        <span class="price" data-monthly="29" data-annual="23">29</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p>Perfect for small projects and individual developers</p>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><span class="check">✓</span> Up to 5 projects</li>
+                        <li><span class="check">✓</span> 10GB storage</li>
+                        <li><span class="check">✓</span> Basic API access</li>
+                        <li><span class="check">✓</span> Community support</li>
+                        <li><span class="check">✓</span> Standard security</li>
+                        <li><span class="check">✓</span> 99.5% uptime</li>
+                    </ul>
+                </div>
+                <div class="pricing-cta">
+                    <a href="https://nashedy.netlify.app/dashboard/" class="btn btn-outline-primary btn-block">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="pricing-card featured">
+                <div class="popular-badge">Most Popular</div>
+                <div class="pricing-header">
+                    <h3>Professional</h3>
+                    <div class="price-container">
+                        <span class="currency">$</span>
+                        <span class="price" data-monthly="99" data-annual="79">99</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p>Ideal for growing teams and businesses</p>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><span class="check">✓</span> Unlimited projects</li>
+                        <li><span class="check">✓</span> 100GB storage</li>
+                        <li><span class="check">✓</span> Advanced API features</li>
+                        <li><span class="check">✓</span> Priority support</li>
+                        <li><span class="check">✓</span> Enhanced security</li>
+                        <li><span class="check">✓</span> 99.9% uptime</li>
+                        <li><span class="check">✓</span> Custom domains</li>
+                        <li><span class="check">✓</span> Analytics dashboard</li>
+                    </ul>
+                </div>
+                <div class="pricing-cta">
+                    <a href="https://nashedy.netlify.app/dashboard/" class="btn btn-primary btn-block">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Enterprise</h3>
+                    <div class="price-container">
+                        <span class="price">Custom</span>
+                    </div>
+                    <p>For large organizations with specific requirements</p>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><span class="check">✓</span> Unlimited everything</li>
+                        <li><span class="check">✓</span> Dedicated infrastructure</li>
+                        <li><span class="check">✓</span> Custom API development</li>
+                        <li><span class="check">✓</span> 24/7 phone support</li>
+                        <li><span class="check">✓</span> Enterprise security</li>
+                        <li><span class="check">✓</span> 99.99% uptime guarantee</li>
+                        <li><span class="check">✓</span> SLA contracts</li>
+                        <li><span class="check">✓</span> Private cloud options</li>
+                    </ul>
+                </div>
+                <div class="pricing-cta">
+                    <a href="https://nashedy.netlify.app/contact/" class="btn btn-outline-primary btn-block">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature Comparison -->
+        <div class="feature-comparison">
+            <h2>Detailed Feature Comparison</h2>
+            <div class="comparison-table">
+                <div class="table-header">
+                    <div class="feature-name">Feature</div>
+                    <div class="plan-name">Starter</div>
+                    <div class="plan-name">Professional</div>
+                    <div class="plan-name">Enterprise</div>
+                </div>
+                <div class="table-row">
+                    <div class="feature-name">API Calls per Month</div>
+                    <div class="feature-value">100K</div>
+                    <div class="feature-value">1M</div>
+                    <div class="feature-value">Unlimited</div>
+                </div>
+                <div class="table-row">
+                    <div class="feature-name">Concurrent Connections</div>
+                    <div class="feature-value">100</div>
+                    <div class="feature-value">1,000</div>
+                    <div class="feature-value">Custom</div>
+                </div>
+                <div class="table-row">
+                    <div class="feature-name">SSL Certificates</div>
+                    <div class="feature-value">Shared</div>
+                    <div class="feature-value">Dedicated</div>
+                    <div class="feature-value">Custom</div>
+                </div>
+                <div class="table-row">
+                    <div class="feature-name">Backup & Recovery</div>
+                    <div class="feature-value">Daily</div>
+                    <div class="feature-value">Hourly</div>
+                    <div class="feature-value">Continuous</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section faq-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about our pricing plans</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I change plans later?
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and you'll only be charged the prorated difference.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you offer discounts for non-profits?
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, we offer special pricing for educational institutions, non-profit organizations, and open source projects. Contact our sales team for more information.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    What payment methods do you accept?
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We accept all major credit cards, PayPal, bank transfers, and cryptocurrency payments including Bitcoin and Ethereum.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is there a free trial available?
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>All plans come with a 14-day free trial. No credit card required to get started.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Get Started?</h2>
+        <p>Join thousands of developers building amazing applications with Nashedy</p>
+        <div class="cta-buttons">
+            <a href="https://nashedy.netlify.app/dashboard/" class="btn btn-primary btn-lg">Start Free Trial</a>
+            <a href="https://nashedy.netlify.app/contact/" class="btn btn-secondary btn-lg">Talk to Sales</a>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Nashedy Ltd</h4>
+                    <p>Building the future with technology and science across Africa and globally</p>
+                    <p><strong>Email:</strong> <a href="mailto:contact@nashedy.io">contact@nashedy.io</a> | <a
+                            href="mailto:support@nashedy.io">support@nashedy.io</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/nashedyltd" target="_blank"
+                            rel="noopener">github.com/nashedyltd</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://nashedy.netlify.app/features/">Runtime & Modules</a></li>
+                        <li><a href="https://nashedy.netlify.app/pricing/">Pricing Plans</a></li>
+                        <li><a href="https://nashedy.netlify.app/dashboard/">Platform Access</a></li>
+                        <li><a href="https://nashedy.netlify.app/hosting/">Infrastructure</a></li>
+                        <li><a href="https://nashedy.netlify.app/domains/">Domain Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://nashedy.netlify.app/about/">About Nashedy</a></li>
+                        <li><a href="https://nashedy.netlify.app/contact/">Contact Us</a></li>
+                        <li><a href="https://github.com/nashedyltd" target="_blank" rel="noopener">Open Source</a></li>
+                        <li><a href="#">Developer Resources</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Developer Portal</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Security Center</a></li>
+                        <li><a href="#">Support Hub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nashedy Ltd. All rights reserved. Modular, Secure, Decentralized Systems.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://nashedy.netlify.app/ js/script.js"></script>
+</body>
+
+</html>
