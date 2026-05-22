@@ -1,71 +1,55 @@
-# Nashedy - Building the Future with Technology and Science
+# Nashedy — Building the Sovereign Future through Technology and Science
 
-We design, build, and manage high-performance software, hardware, and APIs — creating ecosystems that connect technology with real human and business needs across Africa and globally.
+We conduct deep technical research, engineer low-level systems programming tools, and deploy resilient hardware-software ecosystems. Headquartered in Taraba State, Nigeria, Nashedy Ltd designs high-performance infrastructure that connects deterministic software engineering with critical human and business needs globally.
 
-## 🚀 System Architecture
+Our core focus has evolved beyond standard web application interfaces into deep tech development, offline-first infrastructure stability, and programming language design.
 
-**Secure & Static**: The system is compiled to pure, immutable assets for maximum security.
-**Zero Trust**: No backend dependencies, strict Content Security Policy (CSP).
+---
 
-## 📂 Project Structure
+## 🚀 Core Ecosystem & Projects
 
-- `content/`: **Content Source**. Text and structured data.
-- `static/`: **Secure Assets**. CSS, Images, JS (Enterprise Design System).
-- `templates/`: **View Layer**. Secure HTML layouts.
-- `config.toml`: **System Policies**. Security headers and site configuration.
+### The Ovie Programming Language
+Ovie is our flagship systems programming language designed for high-performance, direct memory management, and deterministic execution. It bridges the gap between low-level hardware control and accessible, culture-infused natural syntax (including localized primitives like `seeAm`).
 
-## 🛡️ Security Features
-- **Strict CSP**: Blocks all unauthorized scripts/iframes.
-- **Hidden Practice**: Internal docs are excluded from the build.
-- **Resanitized Input**: All forms communicate directly with secure Nashedy APIs.
+- **Official Codebase & Compiler:** Distributed under the open-source MIT License at [github.com/southwarridev/ovie](https://github.com/southwarridev/ovie)
+- **Infrastructure & Core Registries:** Fully hosted, maintained, and backed natively by the self-hosted infrastructure of Nashedy Ltd.
 
-## 🚀 Deployment Options
+---
 
-This repository supports multiple deployment methods:
+## 🔬 Research & System Architecture
 
-### GitHub Pages
-- Automatically deploys to GitHub Pages via GitHub Actions
-- Uses the `gh-pages` branch for hosting
-- Triggered on pushes to the `main` branch
+- **Zero-Trust Core Architecture:** Systems are compiled to completely pure, immutable assets. We enforce strict boundary security with zero implicit trust and zero reliance on fragile, third-party cloud dependencies.
+- **Offline-First Engineering:** We research and design systems optimized to run independently of continuous external web connectivity, ensuring absolute uptime in any operational environment.
+- **Native Self-Hosting:** Nashedy does not rely on third-party SaaS management. Our development workflows, package registries, and compiler distribution channels run on our own localized infrastructure matrix.
 
-### Netlify
-- Deploys automatically to Netlify
-- Requires setting up `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` secrets in GitHub
-- Triggered on pushes to the `main` branch
+---
 
-### Vercel
-- Deploys automatically to Vercel
-- Requires setting up `VERCEL_TOKEN`, `VERCEL_ORG_ID`, and `VERCEL_PROJECT_ID` secrets in GitHub
-- Triggered on pushes to the `main` branch
+## 📂 System Project Structure
 
-## 🛠️ GitHub Actions Workflows
+- `content/`: **Research & Documentation Source**. Core papers, language specifications, and structured data sources.
+- `static/`: **Secure System Assets**. Low-level system assets, media, and enterprise design system tokens.
+- `templates/`: **Native View Layer**. Secure structural layouts and interface views.
+- `config.toml`: **System Policies**. Deterministic compiler flags, security headers, and structural site configuration.
 
-The repository includes three CI/CD workflows:
+---
 
-1. **nashedy_build.yml**: Builds and deploys to GitHub Pages
-2. **netlify-deploy.yml**: Builds and deploys to Netlify
-3. **vercel-deploy.yml**: Builds and deploys to Vercel
+## 🛡️ Enterprise Security Features
 
-## 📝 Setup Instructions
+- **Cryptographic Verification:** All compiled pipelines undergo automated, sandboxed integrity checks before delivery.
+- **Rigid Perimeter Isolation:** Internal documentation and deep research repositories are structurally separated from outer delivery layers.
+- **Resanitized Secure Streams:** Native forms and data streams communicate directly over end-to-end encrypted, dedicated Nashedy protocols.
 
-To set up this project for deployment:
+---
 
-1. **Fork this repository** to your GitHub account
-2. **Configure secrets** for your deployment platform:
-   - For Netlify: Add `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` secrets
-   - For Vercel: Add `VERCEL_TOKEN`, `VERCEL_ORG_ID`, and `VERCEL_PROJECT_ID` secrets
-3. **Enable GitHub Actions** in your repository settings
-4. **Push changes** to the `main` branch to trigger deployments
+## 🔄 Deployment & Continuous Integration
 
-## 🚀 Local Development
+This ecosystem utilizes a secure, native build pipeline. While development environments support cross-platform engineering, production deployments are built via deterministic workflows that compile directly onto self-hosted Nashedy nodes.
 
-To run the site locally:
+### 🛠️ Local Technical Verification
 
-1. Install Zola (Rust-based static site generator)
-2. Run `zola serve` to start the development server
-3. Visit `http://127.0.0.1:1111` to view the site
+To run or inspect our core documentation systems locally, we utilize Rust-based static generation engines for maximum speed and security.
 
-## 🔄 Continuous Integration
-
-This repository is configured for automated "Zero Trust" deployment via GitHub Actions.
-Pushing to the main branch triggers the secure build pipeline across all configured platforms.
+1. **Initialize the Environment:** Ensure your local binary engine is configured.
+2. **Boot the Host Environment:** Run the localized serving engine:
+   ```bash
+   zola serve
